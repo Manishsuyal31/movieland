@@ -7,74 +7,74 @@ import { useState } from 'react'
 const API_URL = 'http://www.omdbapi.com/?apikey=a30b7806'
 const initialMovies = [
     {
-        "Title": "Italian Spiderman",
-        "Year": "2007",
-        "imdbID": "tt2705436",
+        "Title": "Batman Begins",
+        "Year": "2005",
+        "imdbID": "tt0372784",
         "Type": "movie",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg"
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
-        "Title": "Superman, Spiderman or Batman",
-        "Year": "2011",
-        "imdbID": "tt2084949",
-        "Type": "movie",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ4MzcxNDU3N15BMl5BanBnXkFtZTgwOTE1MzMxNzE@._V1_SX300.jpg"
-    },
-    {
-        "Title": "Spiderman",
-        "Year": "1990",
-        "imdbID": "tt0100669",
-        "Type": "movie",
-        "Poster": "N/A"
-    },
-    {
-        "Title": "Spiderman",
-        "Year": "2010",
-        "imdbID": "tt1785572",
-        "Type": "movie",
-        "Poster": "N/A"
-    },
-    {
-        "Title": "Spiderman and Grandma",
-        "Year": "2009",
-        "imdbID": "tt1433184",
-        "Type": "movie",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BMjE3Mzg0MjAxMl5BMl5BanBnXkFtZTcwNjIyODg5Mg@@._V1_SX300.jpg"
-    },
-    {
-        "Title": "Fighting, Flying and Driving: The Stunts of Spiderman 3",
-        "Year": "2007",
-        "imdbID": "tt1132238",
-        "Type": "movie",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BNTI3NDE1ZmEtMTRiMS00YTY4LTk0OGItNjY4YmI0MDM4OGM4XkEyXkFqcGdeQXVyODE2NDgwMzM@._V1_SX300.jpg"
-    },
-    {
-        "Title": "The Amazing Spiderman T4 Premiere Special",
-        "Year": "2012",
-        "imdbID": "tt2233044",
-        "Type": "movie",
-        "Poster": "N/A"
-    },
-    {
-        "Title": "Spiderman in Cannes",
+        "Title": "Batman v Superman: Dawn of Justice",
         "Year": "2016",
-        "imdbID": "tt5978586",
+        "imdbID": "tt2975590",
         "Type": "movie",
-        "Poster": "https://m.media-amazon.com/images/M/MV5BZDlmMGQwYmItNTNmOS00OTNkLTkxNTYtNDM3ZWVlMWUyZDIzXkEyXkFqcGdeQXVyMTA5Mzk5Mw@@._V1_SX300.jpg"
+        "Poster": "https://m.media-amazon.com/images/M/MV5BYThjYzcyYzItNTVjNy00NDk0LTgwMWQtYjMwNmNlNWJhMzMyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
     },
     {
-        "Title": "Amazing Spiderman Syndrome",
-        "Year": "2012",
-        "imdbID": "tt2586634",
+        "Title": "The Batman",
+        "Year": "2022",
+        "imdbID": "tt1877830",
         "Type": "movie",
-        "Poster": "N/A"
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg"
     },
     {
-        "Title": "Hollywood's Master Storytellers: Spiderman Live",
-        "Year": "2006",
-        "imdbID": "tt2158533",
+        "Title": "Batman",
+        "Year": "1989",
+        "imdbID": "tt0096895",
         "Type": "movie",
-        "Poster": "N/A"
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTYwNjAyODIyMF5BMl5BanBnXkFtZTYwNDMwMDk2._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman Returns",
+        "Year": "1992",
+        "imdbID": "tt0103776",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOGZmYzVkMmItM2NiOS00MDI3LWI4ZWQtMTg0YWZkODRkMmViXkEyXkFqcGdeQXVyODY0NzcxNw@@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman & Robin",
+        "Year": "1997",
+        "imdbID": "tt0118688",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMGQ5YTM1NmMtYmIxYy00N2VmLWJhZTYtN2EwYTY3MWFhOTczXkEyXkFqcGdeQXVyNTA2NTI0MTY@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman Forever",
+        "Year": "1995",
+        "imdbID": "tt0112462",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNDdjYmFiYWEtYzBhZS00YTZkLWFlODgtY2I5MDE0NzZmMDljXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+    },
+    {
+        "Title": "The Lego Batman Movie",
+        "Year": "2017",
+        "imdbID": "tt4116284",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BMTcyNTEyOTY0M15BMl5BanBnXkFtZTgwOTAyNzU3MDI@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman: The Animated Series",
+        "Year": "1992–1995",
+        "imdbID": "tt0103359",
+        "Type": "series",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg"
+    },
+    {
+        "Title": "Batman: Under the Red Hood",
+        "Year": "2010",
+        "imdbID": "tt1569923",
+        "Type": "movie",
+        "Poster": "https://m.media-amazon.com/images/M/MV5BNmY4ZDZjY2UtOWFiYy00MjhjLThmMjctOTQ2NjYxZGRjYmNlL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg"
     }
 ]
 
