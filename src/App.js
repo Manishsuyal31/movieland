@@ -82,14 +82,24 @@ const App = () => {
 
     const [movies, setMovies] = useState(initialMovies);
     const [searchTerm, setSearchTerm] = useState([]);
-
     const searchMovies = async (title) => {
-        const response = await fetch(`${API_URL}&s=${title}`);
-        const data = await response.json();
-
-        setMovies(data.Search)
+        try {
+            const response = await fetch(`${API_URL}&s=${title}`);
+            const data = await response.json();
+            if (data.Response === "False") {
+                setMovies([])
+                setTimeout(() => {
+                    setMovies(initialMovies)
+                }, 4000);
+            }
+            else {
+                setMovies(data.Search)
+            }
+        } catch (error) {
+            alert("API IS NOT WORKING FINE , SORRY");
+        }
     }
-
+    
     return (
         <div className='app'>
             <h1>Moiveland</h1>
