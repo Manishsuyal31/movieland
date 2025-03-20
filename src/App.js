@@ -4,7 +4,7 @@ import SearchIcon from './search.svg'
 import MovieCard from './MovieCard'
 import { useState } from 'react'
 
-const API_URL = 'http://www.omdbapi.com/?apikey=a30b7806'
+const API_URL = 'https://www.omdbapi.com/?apikey=a30b7806'
 const initialMovies = [
     {
         "Title": "Batman Begins",
